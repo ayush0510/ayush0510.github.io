@@ -2079,6 +2079,19 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
   .message-section .options {
     margin: 0; }
 
+.thankyou_message h4{
+  color: #098a71;
+  margin: 15px 0 0 0;
+  font-size: 16px;
+  letter-spacing: .02em;
+  font-weight: 600;
+  padding: 10px 15px;
+  padding-right: 75px;
+  background: #dcfbde;
+  display: inline-block;
+  border-radius: 4px;
+}
+    
 #contact-form {
   margin-top: 30px;
   font-size: 1.125rem;

@@ -71,39 +71,6 @@ $(document).ready(function(){
 		// ------------------------------
 });
 
-// Contact
-// $(function() {
-//   $('#contact-form').validate({
-//     rules: {
-//       name: {
-//         required: true,
-//         minlength: 2
-//       },
-//       email: {
-//         required: true,
-//         email: true
-//       },
-//       message: {
-//         required: true
-//       }
-//     },
-//     submitHandler: function(form) {
-//       $(form).ajaxSubmit({
-//         type:"POST",
-//         data: $(form).serialize(),
-//         url:"contact.php",
-//         success: function() {
-//           $('#contact-form :input').attr('disabled', 'disabled');
-//           $('#contact-form').addClass( "success");
-//         },
-//         error: function() {
-//           $('#contact-form').addClass( "error");
-//         }
-//       });
-//     }
-//   });
-// });
-
 $(document).ready(function () {
   $( ".send-button" ).click(function() {
     $( this ).addClass( "loading" );
@@ -141,10 +108,10 @@ function validEmail(email) { // see:
 
 function validateHuman(honeypot) {
   if (honeypot) {  //if hidden form filled up
-    console.log("Robot Detected!");
+    //console.log("Robot Detected!");
     return true;
   } else {
-    console.log("Welcome Human!");
+    //console.log("Welcome Human!");
   }
 }
 
@@ -193,7 +160,7 @@ function getFormData() {
   data.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
   data.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
-  console.log(data);
+  //console.log(data);
   return data;
 }
 
@@ -220,12 +187,16 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     // xhr.withCredentials = true;
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
-        console.log( xhr.status, xhr.statusText )
-        console.log(xhr.responseText);
-        document.getElementById("contact-form").style.display = "none"; // hide form
+        //console.log( xhr.status, xhr.statusText )
+        //console.log(xhr.responseText);
+        //document.getElementById("contact-form").style.display = "none"; // hide form
+        document.getElementById("contact-form").reset();
+        var element = document.getElementById("send-button");
+        element.classList.remove("loading");
         var thankYouMessage = document.getElementById("thankyou_message");
         if (thankYouMessage) {
           thankYouMessage.style.display = "block";
+          setTimeout(function(){ thankYouMessage.style.display = "none"; }, 5000);
         }
         return;
     };
@@ -237,7 +208,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   }
 }
 function loaded() {
-  console.log("Contact form submission handler loaded successfully.");
+  //console.log("Contact form submission handler loaded successfully.");
   // bind to the submit event of our form
   var form = document.getElementById("contact-form");
   form.addEventListener("submit", handleFormSubmit, false);

@@ -319,7 +319,7 @@
                     <p>You can download my CV in pdf format if you like. I currently work for Mindfire Solutions. I create usable
                         web interfaces, front end coding stuff and almost anything. But i love what i do.</p>
                     <div class="download-button">
-                        <a href="#" class="button primary">DOWNLOAD CV</a>
+                        <a href="pdf/Resume.pdf" class="button primary" download>DOWNLOAD CV</a>
                     </div>
                 </div>
 
@@ -348,9 +348,10 @@
                             <p class="title">say hi —</p>
                             <p class="options">by email : ayushsingh0722@gmail.com
                                 <br>or write me a message</p>
-                            <div style="display:none;" id="thankyou_message">
+                            <div style="display:none;" id="thankyou_message" class="thankyou_message">
                                 <h4>
-                                    <em>Thanks</em> for contacting us! We will get back to you soon!</h4>
+                                    Thanks for contacting us! We will get back to you soon!
+                                </h4>
                             </div>
                             <form id="contact-form" name="contact-form" method="post" novalidate="novalidate" action="https://script.google.com/macros/s/AKfycbzWnfrsRhiyxZZyGmZ_FpT1trR3dk1JBdxDd6oMivT0aFOa7b8Q/exec">
                                 <div class="name inp-grp">
@@ -369,7 +370,7 @@
                                     <div class="line line-1"></div>
                                     <div class="line line-2"></div>
                                 </div>
-                                <div class="send-button">
+                                <div class="send-button" id="send-button">
                                     <input type="submit" id="submit" value="">
                                 </div>
                                 <div class="contact-sent">
