@@ -2150,6 +2150,9 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
       transition: all .2s ease; }
       #contact-form .send-button input:hover {
         background-color: #0ec19f; }
+        #contact-form .send-button input:disabled{
+          cursor: disabled;
+        }
     #contact-form .send-button.loading:before {
       content: "";
       display: block;
