@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lily+Script+One');
 /* normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -67,7 +68,6 @@ audio:not([controls]) {
  * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
 
  */
- @import url('https://fonts.googleapis.com/css?family=Lily+Script+One');
 [hidden],
 template {
   display: none; }
@@ -1351,6 +1351,17 @@ header {
   display: block;
   width: 3em; }
   @media only screen and (max-width: 700px) {
+    .project-box{
+      padding-left: 7.5px;
+      padding-right: 0px;
+    }
+    .project-box:nth-child(2n+1){
+      padding: 0px;
+      padding-right: 7.5px;      
+    }
+    header{
+      position: absolute;
+    }
     .logo {
       font-size: 12px;
       margin-left: 1rem; } }
@@ -1692,9 +1703,20 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
     text-align: center;
     padding-bottom: 50px;
   }
-  #intro-section .top-intro-section img {
+  #intro-section .top-intro-section-img img {
     max-height: 160px;
     border-radius: 50%;
+    display: none;
+    margin: auto;
+  }
+  .top-intro-section-img{
+    display: inline-block;
+  }
+  #intro-section .top-intro-section-img img.ayush-img, #intro-section .top-intro-section-img:hover img.ayush-img-hover{
+    display: block;
+  }
+  #intro-section .top-intro-section-img:hover img.ayush-img, #intro-section .top-intro-section-img img.ayush-img-hover{
+    display: none;
   }
   #intro-section .top-intro-section h1 {
     margin: .9em 0 0 0;
@@ -1707,13 +1729,13 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
     font-size: 1em;
     margin: .1em 0 .6em;
     display: inline-block;
-    font-style: italic;
-    padding: 6px 10px;
+    letter-spacing: 0px;
+    padding: 6px 15px;
     background: #FAF46A;
-    color: #345;
-    color: rgba(0,0,0,.7);
+    color: rgba(0, 0, 0, 0.7);
     border-radius: 4px;
     line-height: 1;
+    font-family: 'Lily Script One', cursive;
   }
   #intro-section .intro-text .title {
     font-size: 32px;
@@ -1996,9 +2018,8 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
     transition: all .2s ease; }
     .project-box .image span {
     font-weight: 400;
-    font-size: 22px;
-    font-style: italic;
-    color: #222;
+    font-size: 20px;
+    color: #444;
     letter-spacing: 1px;
     font-family: 'Lily Script One', cursive;
     }
