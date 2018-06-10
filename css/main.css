@@ -2579,3 +2579,13 @@ footer {
 @media (min-width: 1200px) {
   .hidden-lg {
     display: none !important; } }
+@media (min-width: 992px) {
+  #intro-section .top-intro-section
+  {
+    padding-bottom: 0px;
+  }
+  #intro-section .intro-text
+  {
+    padding-top: 30px;
+  }
+}
